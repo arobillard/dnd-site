@@ -1,0 +1,3 @@
+baseurl: /dnd-site
+exclude: ['README.md']
+permalink: pretty
