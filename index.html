@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<main role="main">
+  <div class="banner">
+    <div class="banner-content inline-block text-center island">
+      <h1 class="push-1-2">Join us at FanCon!</h1>
+      <p class="mega text-fff">Ottawa's premier fantasy convention returns July 21, 2018!</p>
+      <a id="content-start" class="btn mega" href="#">Book now</a>
+    </div>
+  </div>
+  <div class="wrapper pad-t-2 pad-b-2">
+    <h2 class="gutter-1-2">Speakers</h2>
+    <ul class="speaker-list grid grid-stretch list-group gutter-1-4 push">
+      {% for speaker in site.data.speaker-list %}
+        <li class="unit unit-content-distribute [ xs-1 m-1-3 ] island-1-4">
+          <a class="content-fill unit-content-distribute" href="{{site.baseurl}}/speakers/{{speaker.folder}}">
+            <div class="embed embed-3by2 push-1-2">
+              <img class="embed-item" src="{{site.baseurl}}/images/{{speaker.image}}" alt="">
+            </div>
+            <h3 class="push-1-2 giga">{{speaker.title}}</h3>
+            <h4 class="mega push-0">{{speaker.topic}}</h4>
+            <p class="content-fill">{{speaker.content}}</p>
+            <p class="text-accent underline bold font-secondary push-0">Learn more</p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="gutter-1-2">
+      <a class="mega" href="#">See full list of speakers.</a>
+    </div>
+  </div>
+</main>

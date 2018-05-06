@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{page.title}} · {% endif %}FanCon Ottawa{% if page.titleAfter %} · {{page.titleAfter}}{% endif %}</title>
+  <meta name="handheldfriendly" content="true">
+  <meta name="mobileoptimized" content="240">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="{{site.baseurl}}/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/uyf1nxk.css">
+</head>
+<body>
+  <ul class="skip-links">
+    <li><a href="#content-start">Jump to main content</a></li>
+    <li><a href="#nav-start">Jump to navigation</a></li>
+  </ul>
+  <header class="masthead" role="banner">
+    {% include topbar.html %}
+    <div class="grid grid-middle wrapper island-1-2">
+      <div class="unit xs-1-2 m-1-2">
+        <strong><img class="main-logo" src="{{site.baseurl}}/images/logo.svg" alt="FanCon Ottawa logo"></strong>
+      </div>
+      <div class="unit xs-0 m-1-2">
+        {% include nav-social.html %}
+      </div>
+      <div class="unit xs-1-2 m-0 text-right">
+        <div class="valign-middle nav-tog gutter-1-2">
+          <a class="nav-label block" href="#footer">
+            <span class="tog top"></span>
+            <span class="tog middle"></span>
+            <span class="tog bottom"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-wrap">
+      {% include nav.html navClass='wrapper' navStart=' id="nav-start"' %}
+    </div>
+  </header>
+  {{content}}
+  <footer id="footer" class="footer" role="contentinfo">
+    <div class="grid wrapper gutter-1-2 pad-t-2 pad-b-2">
+      <div class="unit xs-1 m-1-2 milli">
+        {% include nav.html navPad='island-1-4' %}
+      </div>
+      <div class="unit xs-1 m-1-2">
+        {% include nav-social.html %}
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="{{site.baseurl}}/js/main.js"></script>
+</body>
+</html>

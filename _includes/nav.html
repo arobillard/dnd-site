@@ -1,0 +1,8 @@
+<nav id="nav" class="nav {{include.navClass}}" role="navigation">
+  <ul class="list-group push-0">
+    <li><a{{include.navStart}} class="{% if page.url == '/' %}current{% endif %} {{include.navPad}}" href="#">Home</a></li>
+    <li><a class="{{include.navPad}}" href="#">Schedule</a></li>
+    <li><a class="{{include.navPad}}" href="#">Speakers</a></li>
+    <li><a class="{{include.navPad}}" href="#">Passes</a></li>
+  </ul>
+</nav>

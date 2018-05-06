@@ -1,0 +1,17 @@
+- title: Denise Johnson
+  image:  johnson.jpg
+  folder: denise-johnson
+  topic: 'Cosplay: From Functional to Fabulous'
+  content: 'Upgrade your cosplaying skills with this guide that takes you from concept to completion.'
+
+- title: Matthew Mercer
+  image: mercer.jpg
+  folder: matthew-mercer
+  topic: 'Dungeons and Dragons with a Master DM'
+  content: 'A comprehensive guide through developing and running unique adventures for your party.'
+
+- title: John Smith
+  image:  smith.jpg
+  folder: john-smith
+  topic: 'How to Run the Ultimate Board Game Night'
+  content: 'Whether your group is small or large, learn how to take your board game night to the next level.'

@@ -1,0 +1,148 @@
+:root {
+  --font-primary: "capitolium-news-2", "Georgia", serif;
+  --font-secondary: "ff-cocon-pro", sans-serif;
+  --color-primary: #70d44b;
+  --color-secondary: #54565a;
+  --color-accent: #225d38;
+  --color-accent-dark: #1a4a2c;
+  --color-grey-light: #f6f6f6;
+  --transition-speed: .15s;
+}
+
+html {
+  font-family: var(--font-primary);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-secondary);
+}
+
+h1,
+h3 {
+  color: var(--color-primary);
+}
+
+[class*="text-"] {
+  transition: color var(--transition-speed) linear;
+}
+
+.text-primary {
+  color: var(--color-primary)
+}
+
+.text-secondary {
+  color: var(--color-secondary)
+}
+
+.text-accent {
+  color: var(--color-accent)
+}
+
+.text-fff {
+  color: #fff;
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+a {
+  color: var(--color-accent);
+  transition: color var(--transition-speed) linear;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  transition: color var(--transition-speed) linear;
+}
+
+.i-social {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.close {
+  transition: transform var(--transition-speed) linear;
+}
+
+.close:hover {
+  transform: scale(2);
+  cursor: pointer;
+}
+
+/* ---------- Banner ---------- */
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) center / cover no-repeat,
+    url('{{site.baseurl}}/images/banner-home.jpg') center / cover no-repeat;
+
+}
+
+/* ---------- Speaker List ---------- */
+
+.speaker-list h3 {
+  position: relative;
+  padding-bottom: 7.5px;
+}
+
+.speaker-list h3::after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 7.5px;
+  width: 25%;
+  background-color: var(--color-secondary);
+  transition: width var(--transition-speed) ease-in-out;
+}
+
+.speaker-list a:hover h3::after,
+.speaker-list a:focus h3::after {
+  width: 33.333%
+}
+
+.speaker-list a {
+  display: flex;
+  color: #000;
+  text-decoration: none;
+}
+
+.speaker-list img {
+  transition: transform var(--transition-speed) linear;
+}
+
+.speaker-list a:hover img,
+.speaker-list a:focus img {
+  transform: scale(1.1);
+}
+
+.speaker-list a:hover .text-accent,
+.speaker-list a:focus .text-accent {
+  color: var(--color-primary);
+}
+
+.speaker-list .unit {
+  margin-bottom: 1.3rem;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .speaker-list .unit {
+    margin-bottom: 0;
+  }
+
+}

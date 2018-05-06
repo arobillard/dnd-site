@@ -1,0 +1,125 @@
+.topbar {
+  display: none;
+}
+
+.topbar a {
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  transition: all var(--transition-speed) linear;
+}
+
+.topbar a:hover,
+.topbar a:focus {
+  background-color: var(--color-accent-dark);
+}
+
+.topbar .close {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+}
+
+.topbar .close:hover,
+.topbar .close:focus {
+  transform: scale(1.2) translateY(-50%);
+}
+
+.masthead {
+  background-color: #fff;
+  border-bottom: 7.5px var(--color-primary) solid;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.masthead .nav-social {
+  text-align: right;
+}
+
+.main-logo {
+  width: 6.315625rem;
+  margin-left: .65rem;
+}
+
+.nav-wrap {
+  background-color: var(--color-secondary);
+}
+
+.masthead .nav a {
+  color: #fff;
+  padding: .65rem 0;
+  position: relative;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+}
+
+.masthead .nav a::after {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 7.5px;
+  width: 0;
+  background-color: var(--color-primary);
+  transition: width var(--transition-speed) ease-in-out;
+  z-index: 1;
+}
+
+.masthead .nav a.current::after,
+.masthead .nav a:hover::after,
+.masthead .nav a:focus::after {
+  width: 100%;
+}
+
+@media only screen and (min-width: 38em) {
+
+  .topbar {
+    display: block;
+  }
+
+  .masthead {
+    border: none;
+    position: static;
+  }
+
+  .main-logo {
+    width: 50%;
+    max-width: 10rem;
+    margin: 0;
+  }
+
+  .masthead .nav {
+    padding: 0 .7rem;
+  }
+
+  .masthead .nav li {
+    display: inline-block;
+    margin: 0 .7rem;
+  }
+
+  .masthead .nav a {
+    padding: .7rem 0;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  .masthead .nav {
+    padding: 0 .75rem;
+  }
+
+  .masthead .nav li {
+    margin: 0 .75rem;
+  }
+
+  .masthead .nav a {
+    padding: .75rem 0;
+  }
+
+}
